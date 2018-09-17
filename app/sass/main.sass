@@ -1,0 +1,108 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+//video background
+
+.homepage-hero-module
+  border-right: none
+  border-left: none
+  position: relative
+
+.no-video .video-container video, .touch .video-container video
+  display: none
+
+.no-video .video-container .poster, .touch .video-container .poster
+  display: block !important
+
+.video-container
+  position: relative
+  bottom: 0%
+  left: 0%
+  height: 100%
+  width: 100%
+  overflow: hidden
+  background: #000
+  .poster img
+    width: 100%
+    bottom: 0
+    position: absolute
+  .filter
+    z-index: 100
+    position: absolute
+    background: rgba(0, 0, 0, 0.4)
+    width: 100%
+  video
+    position: absolute
+    z-index: 0
+    bottom: 0
+    &.fillWidth
+      width: 100%
+
+.masthead
+	position: absolute
+	z-index: 99
+	padding: 0 50px
+	width: 100%
+
+.header-bar
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-flow: row wrap
+	align-items: center
+.navigation
+	ul
+		li
+			display: inline-block
+			a
+				color: #fff
+				text-decoration: none
+				text-transform: uppercase
+				&:hover
+					text-decoration: none
+
+
+//video background end
+
+
+@import "media" // Always at the end
