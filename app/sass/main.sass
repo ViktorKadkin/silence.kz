@@ -25,6 +25,7 @@ body
 		&:required:valid
 			border-color: green
 
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -80,6 +81,7 @@ b, strong
 	z-index: 99
 	padding: 0 50px
 	width: 100%
+	height: 100px
 
 .header-bar
 	width: 100%
@@ -88,18 +90,46 @@ b, strong
 	display: -ms-flex
 	display: -o-flex
 	display: flex
-	flex-flow: row wrap
-	align-items: center
+	justify-content: center
+	height: 100px
+	
+
 .navigation
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	height: 100%
 	ul
+		margin-top: 5px
 		li
 			display: inline-block
 			a
 				color: #fff
 				text-decoration: none
 				text-transform: uppercase
+				padding: 30px 100px
+				box-sizing: border-box
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				font-family: open-sans
 				&:hover
 					text-decoration: none
+
+.branding
+	width: 131px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-item: center
+	a
+		margin: auto
 
 
 //video background end
