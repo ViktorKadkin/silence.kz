@@ -25,6 +25,8 @@ body
 		&:required:valid
 			border-color: green
 
+ul
+	padding-inline-start: 0
 
 .img-responsive
 	display: block
@@ -101,6 +103,9 @@ b, strong
 	display: -o-flex
 	display: flex
 	height: 100%
+	&:first-child
+		padding-left: 40px
+
 	ul
 		margin-top: 5px
 		li
@@ -109,7 +114,7 @@ b, strong
 				color: #fff
 				text-decoration: none
 				text-transform: uppercase
-				padding: 30px 100px
+				padding: 30px 90px
 				box-sizing: border-box
 				display: -webkit-flex
 				display: -moz-flex
@@ -132,7 +137,38 @@ b, strong
 		margin: auto
 
 
+.line
+	position: relative
+	&::after
+		content: ''
+		height: 2px
+		width: 100%
+		background-color: #fff
+		display: block
+		transition: all .2s ease-in-out
+		transform: scaleX(0)
+		position: absolute
+		visibility: hidden
+	&:hover::after
+		transform: scaleX(1)
+		visibility: visible
 //video background end
 
+// First selection
+#about
+	background-color: #000
+	padding-top: 35px
+	padding-bottom: 100px
+
+.block_h2
+	text-align: center
+	margin: auto
+	
+.dark-sec
+	color: #CDC5C5
+
+.img_wrap
+	img
+		max-width: 170px
 
 @import "media" // Always at the end
