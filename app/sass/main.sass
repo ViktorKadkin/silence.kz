@@ -17,6 +17,7 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
+	background: #ffffff url('../img/grid-dark.png') repeat center top;
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -42,6 +43,8 @@ b, strong
 	font-weight: bold
 
 //video background
+.wrap-video-bg	//my custom class
+	width: 100%  
 
 .homepage-hero-module
   border-right: none
@@ -77,6 +80,7 @@ b, strong
     bottom: 0
     &.fillWidth
       width: 100%
+// video bg end
 
 .masthead
 	position: absolute
@@ -121,7 +125,7 @@ b, strong
 				display: -ms-flex
 				display: -o-flex
 				display: flex
-				font-family: open-sans
+				font-family: "open-sans"
 				&:hover
 					text-decoration: none
 
@@ -162,13 +166,51 @@ b, strong
 
 .block_h2
 	text-align: center
-	margin: auto
-	
+	width: 100%
+	margin-bottom: 35px
+	padding-bottom: 50px
+	font-size: 36px
+	font-family: "open-sans"
+	padding-top: 50px
+	line-height: 
+
+
+
+
 .dark-sec
 	color: #CDC5C5
+
+.bright_sec
+	color: #808080
 
 .img_wrap
 	img
 		max-width: 170px
+		display: block
+		margin: auto
+.vpb_text
+	padding-top: 50px
+	margin-bottom: 35px
+	h4
+		text-align: center
+		color: #dbd3d3
+		font-size: 18px
+
+
+// works
+
+.bg-img
+	width: 100%
+	height: 500px
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
+
+#turan
+	background-image: url('../img/works/turan-prezentation-1024x576.png')
+
+#pomosch
+	background-image: url('../img/works/psp_glav-1024x576.png')
+
 
 @import "media" // Always at the end
