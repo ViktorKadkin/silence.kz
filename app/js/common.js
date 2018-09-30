@@ -1,7 +1,20 @@
 $(function() {
 
 	// Custom JS
-
+	$(document).ready(function(){
+  $(".partners").owlCarousel({
+  	items: 5,
+  	dots: false,
+  	nav: true,
+  	navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+  	loop: true,
+  	responsive: {
+  		0:{
+  			item: 1
+  		}
+  	}
+  });
+	});
 });
 
 // jQuery is required to run this code
