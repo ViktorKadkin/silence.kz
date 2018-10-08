@@ -5,9 +5,9 @@
 ::placeholder
 	color: #666
 
-::selection
-	background-color: $accent
-	color: #fff
+// ::selection
+// 	background-color: $accent
+// 	color: #666
 
 body
 	font-size: 16px
@@ -17,7 +17,7 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
-	background: #ffffff url('../img/grid-dark.png') repeat center top;
+	
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -91,20 +91,12 @@ b, strong
 
 .header-bar
 	width: 100%
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
 	display: flex
 	justify-content: center
 	height: 100px
 	
 
 .navigation
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
 	display: flex
 	height: 100%
 	&:first-child
@@ -120,10 +112,6 @@ b, strong
 				text-transform: uppercase
 				padding: 30px 90px
 				box-sizing: border-box
-				display: -webkit-flex
-				display: -moz-flex
-				display: -ms-flex
-				display: -o-flex
 				display: flex
 				font-family: "open-sans"
 				&:hover
@@ -131,10 +119,6 @@ b, strong
 
 .branding
 	width: 131px
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
 	display: flex
 	align-item: center
 	a
@@ -160,18 +144,14 @@ b, strong
 
 // First selection
 #about
-	background-color: #000
-	padding-top: 35px
-	padding-bottom: 100px
+	padding-bottom: 50px
 
 .block_h2
 	text-align: center
 	width: 100%
 	margin-bottom: 35px
-	padding-bottom: 50px
 	font-size: 36px
 	font-family: "open-sans"
-	padding-top: 50px
 	line-height: 
 
 
@@ -179,9 +159,12 @@ b, strong
 
 .dark-sec
 	color: #CDC5C5
+	background-color: #000
+	padding-top: 35px
 
 .bright_sec
 	color: #808080
+	padding-top: 35px
 
 .img_wrap
 	img
@@ -193,7 +176,6 @@ b, strong
 	margin-bottom: 35px
 	h4
 		text-align: center
-		color: #dbd3d3
 		font-size: 18px
 
 
@@ -274,6 +256,8 @@ b, strong
 	.owl-next
 		position: absolute
 		right: -50px
+	button
+		outline: none
 
 #partners
 	padding-bottom: 50px
