@@ -1,29 +1,29 @@
 $(function() {
 
 	// Custom JS
-	$(document).ready(function(){
-  $(".partners").owlCarousel({
-  	items: 5,
-  	dots: false,
-  	nav: true,
-  	navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
-  	loop: true,
-  	responsive: {
-  		0:{
-  			items: 1,
-  			nav: false
-  		},
-  		768:{
-  			items: 3
-  		},
-  		992:{
-  			items: 4
-  		}
-  	},
-  	smartSpeed: 500
-  });
-	});
-});
+// 	$(document).ready(function(){
+//   $(".partners").owlCarousel({
+//   	items: 5,
+//   	dots: false,
+//   	nav: true,
+//   	navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+//   	loop: true,
+//   	responsive: {
+//   		0:{
+//   			items: 1,
+//   			nav: false
+//   		},
+//   		768:{
+//   			items: 3
+//   		},
+//   		992:{
+//   			items: 4
+//   		}
+//   	},
+//   	smartSpeed: 500
+//   });
+// 	});
+
 
 // jQuery is required to run this code
   $( document ).ready(function() {
@@ -82,3 +82,4 @@ $(function() {
 
     });
   }
+});
