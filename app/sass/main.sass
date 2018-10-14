@@ -81,10 +81,59 @@ b, strong
     &.fillWidth
       width: 100%
 // video bg end
+// togle menu 
+.toggle-mnu 
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: 14px
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+// togle menu end
+
+//sm header
+
+.mobile-header-bar
+	display: flex
+	justify-content: space-between
+	margin-top: 5%
+
+
+//sm header end
 
 .masthead
 	position: absolute
-	z-index: 99
+	z-index: 105
 	padding: 0 50px
 	width: 100%
 	height: 100px
@@ -264,25 +313,114 @@ b, strong
 // #partners
 // 	padding-bottom: 50px
 	
-//footer
-.mainfooter
-	background: #1b1b1b url('../img/binding_dark.gif') repeat center top
-	padding: 3% 0
-	color: #fff
-	font-size: 14px
-.footer-column
-	margin: 15px 0
-// footer end
 
 .clients-wrapper
 	display: flex
 	flex-wrap: wrap
-	justify-content: space-between
+	justify-content: space-around
+	align-items: center
+	margin-bottom: 30px
 	.client-item
-		max-width: 200px
+		max-width: 280px
+		padding: 20px 0
+		display: flex
+		justify-content: center
+		align-items: center
 		img
-			width: 100%
+			max-width: 60%
 
 
 
+//footer
+.mainfooter
+	background-color: #000
+	color: #fff
+	font-size: 14px
+	padding: 30px 40px
+	padding-bottom: 0
+	.footer-column
+		margin: 15px 0
+		width: 100%
+	.social
+		list-style: none
+		li
+			display: inline-block
+			margin-right: 10px
+			a
+				color: #fff
+				font-size: 30px
+
+.silence_digital_low_wrap
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+
+.phone-wrap
+	text-align: right
+	font-size: 24px
+	.fas
+		transform: scaleX(-1)
+		position: relative
+		margin-right: 10px
+		font-size: 26px
+		top: 3px
+
+.copyright-wrap
+	text-align: right
+		
+// footer end
+
+
+//mobile menu
+
+.mobile-menu
+	position: fixed
+	top: 0
+	left: 0
+	background: #fff
+	bottom: 0
+	z-index: 107
+	width: 330px
+	padding: 30px
+	transform: translate3d(-100%,0,0);
+	transition: transform .5s ease;
+	ul
+		list-style: none
+		a
+			font-family: "open-sans", Helvetica, Arial, Verdana, sans-serif;
+			color: #262b2e
+			font-weight: 500
+		li
+			padding: 16px 30px 16px 0
+			border-bottom: 1px #e9eaea solid
+			&:last-child
+				border-bottom: none
+
+.mobile-sticky-header-overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(17,17,17,0.4)
+	visibility: hidden
+	opacity: 0
+
+.show-mobile-menu
+	transform: translate3d(0,0,0);
+
+.active-overlay
+	z-index: 104
+	opacity: 1
+	visibility: visible
+
+.fixed
+	position: fixed
+	background-color: #fff
+	.navigation
+		li
+			a
+				color: #000
+//mobile menu end
 @import "media" // Always at the end

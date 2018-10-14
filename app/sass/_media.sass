@@ -5,15 +5,23 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+	
+	.header-bar
+		.navigation
+			ul
+				li
+					a
+				 		padding: 30px 50px
 
 // ≥992px
 +media-breakpoint-down(md)
 	.hidden-md
-		display: none
+			display: none
 // ≥768px
 +media-breakpoint-down(sm)
 	.hidden-sm
 		display: none
+
 // ≥576px
 +media-breakpoint-down(xs)
 	.hidden-xs
@@ -30,6 +38,7 @@
 
 // ≤992px
 +media-breakpoint-up(lg)
-
+	.hidden-lg
+		display: none
 // ≤1200px
 +media-breakpoint-up(xl)

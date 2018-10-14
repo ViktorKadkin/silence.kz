@@ -82,4 +82,32 @@ $(function() {
 
     });
   }
+
+  
+  	
+
+  	// fixed header
+  	var winPos;
+  	$(window).scroll(function(){
+  		winPos = $(window).scrollTop();
+  		if(winPos >= 200){
+  			$('.masthead').addClass('fixed');
+  		}
+  		else{
+  			$('.masthead').removeClass('fixed');
+  			
+  		}
+  	})
+  	//togle menu
+  	$(".toggle-mnu").click(function() {
+  	$(this).toggleClass("on");
+  	$('.mobile-menu').toggleClass('show-mobile-menu');
+  	$('.mobile-sticky-header-overlay').toggleClass('active-overlay');
+
+  	return false;
+});
+
+
+  
+  
 });
