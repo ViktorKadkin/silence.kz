@@ -155,14 +155,13 @@ b, strong
 
 
 	ul
-		margin-top: 5px
 		display: flex
 		align-content: stretch
 		align-items: stretch
-		font-weight: wrap
 		flex-grow: 10
 		align-items: center
 		justify-content: spase-between
+		margin-bottom: 0 !important
 		li
 			display: flex
 			align-items: spase-between
@@ -194,7 +193,7 @@ b, strong
 	justify-content: center
 
 #img-logo
-	width: 3.3vw
+	width: 3.3vmax
 	
 
 
@@ -265,6 +264,70 @@ b, strong
 
 
 // works
+
+.work-wrap
+	display: flex
+	flex-wrap: wrap
+
+.work-item
+	height: 50vh
+	max-width: 49.5vw
+	width: 50%
+	overflow: hidden
+	position: relative
+	img
+		width: 100%
+		position: absolute
+		z-index: 1
+		height: 100%
+	a
+		position: absolute
+		top: 0
+		left: 0
+		display: flex
+		width: 100%
+		flex-flow: column nowrap
+		color: #fff
+		z-index: 2
+		align-items: center
+		justify-content: center
+		height: inherit
+		opacity: 0
+		transition: all .5s ease-in-out
+		background-color: rgba(0,0,0,.5)
+		&:hover
+			h3
+				&::after
+					transform: scaleX(1)
+
+		h3
+			font-family: "roboto-example"
+			font-size: 26px
+			font-weight: 100
+			width: 45%
+			text-align: center
+			&::after
+				content: ""
+				height: 1px
+				width: 100%
+				display: block
+				background-color: #fff
+				margin-top: 10px
+				transform: scaleX(0)
+				transition: all .8s ease-in-out
+		&:hover
+			text-decoration: none
+			opacity: 1
+			
+
+		
+
+		
+.blur
+	img
+		filter: blur(2px)
+
+
 
 .no-padding
 	padding-left: 0

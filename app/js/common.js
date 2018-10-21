@@ -107,9 +107,16 @@ $(function() {
   	$(this).toggleClass("on");
   	$('.mobile-menu').toggleClass('show-mobile-menu');
   	$('.mobile-sticky-header-overlay').toggleClass('active-overlay');
-
   	return false;
-});
+		});
+
+  	// blur work
+
+  	$('.work-item').hover(function(){
+  		$(this).addClass('blur');
+  		}, function(){
+  		$(this).removeClass('blur');
+  		})
 
 
   
