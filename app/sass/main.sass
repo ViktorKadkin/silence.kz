@@ -140,43 +140,62 @@ b, strong
 	height: 100px
 
 .header-bar
-	width: 100%
 	display: flex
-	justify-content: center
+	justify-content: space-between
 	height: 100px
+	align-content: stretch
+	align-items: stretch
+	margin: 0 auto
+	max-width: calc(1250px - 100px);
 	
 
 .navigation
 	display: flex
-	height: 100%
-	&:first-child
-		padding-left: 40px
+	flex: 1 1 0
+
 
 	ul
 		margin-top: 5px
+		display: flex
+		align-content: stretch
+		align-items: stretch
+		font-weight: wrap
+		flex-grow: 10
+		align-items: center
+		justify-content: spase-between
 		li
-			display: inline-block
+			display: flex
+			align-items: spase-between
+			flex-grow: 1
 			a
 				color: #fff
 				text-decoration: none
 				text-transform: uppercase
-				padding: 30px 90px
+				align-items: center
+				flex-grow: 1
+				//padding: 2.77vh 4.85vw
+				// padding: 30px 90px
+				// height: 7.50vh
+				// width: 11.55vw
+				//align-items: center
 				box-sizing: border-box
 				display: flex
 				font-family: "open-sans"
+				justify-content: center
 				&:hover
 					text-decoration: none
 
 .branding
-	width: 131px
+	width: 7.07vw
 	display: flex
 	align-item: center
 	a
 		margin: auto
+	justify-content: center
 
 #img-logo
-	width: 71px
-	height: 43px
+	width: 3.3vw
+	
 
 
 .line
@@ -205,8 +224,7 @@ b, strong
 	color: rgba(255, 255, 255, .85)
 	left: 33%
 	top: 40%
-	font-size: 36px
-	font-weight: 300
+	font-size: 2.08vmax
 	text-align: left
 
 // First selection
@@ -254,7 +272,7 @@ b, strong
 
 .bg-img
 	width: 100%
-	height: 500px
+	height: 50vh
 	background-repeat: no-repeat
 	background-position: 50% 50%
 	background-size: cover
@@ -272,7 +290,7 @@ b, strong
 	background-image: url('../img/works/Sl-1920x960.png')
 
 #interior
-	background-image: url('../img/works/Sl-1920x960.png')
+	background-image: url('../img/works/Снимок-экрана-2018-05-15-в-14.47.58-2-1920x960.png')
 
 #techno
 	background-image: url('../img/works/kithen-1920x960.png')
@@ -283,11 +301,6 @@ b, strong
 #meizu
 	background-image: url('../img/works/meizu-1920x960.png')
 
-#cinemax
-	background-image: url('../img/works/Cinemax-4-1440x720.png')
-
-#sdshapes
-	background-image: url('../img/works/sd_shapes-1920x960.png')
 
 
 //partners
@@ -436,13 +449,12 @@ b, strong
 	background-color: #fff
 	height: 60px
 	border-bottom: solid #000 1px
+	.header-bar
+		height: 100%
 	#fixed-logo
 		display: block
-		width: 70px
-		height: 40px
-		position: absolute
-		top: 10px
-		left: 47.5%
+		width: 3.3vw
+		
 
 	#img-logo
 		display: none
@@ -450,7 +462,6 @@ b, strong
 		li
 			a
 				color: #000
-				padding: 10px 90px
 	.line
 		&::after
 			background-color: #000
