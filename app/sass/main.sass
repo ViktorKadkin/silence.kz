@@ -234,7 +234,7 @@ b, strong
 
 // First selection
 #about
-	padding-bottom: 50px
+	padding-bottom: 10px
 
 .block_h2
 	text-align: center
@@ -253,7 +253,7 @@ b, strong
 
 .bright_sec
 	color: #000
-	padding-top: 35px
+	padding-top: 30px
 
 .img_wrap
 	img
@@ -261,12 +261,13 @@ b, strong
 		display: block
 		margin: auto
 .vpb_text
-	padding-top: 50px
+	padding-top: 22px
 	margin-bottom: 35px
 	h4
 		text-align: center
 		font-size: 18px
 		font-family: $default-font
+		font-weight: 100
 
 
 // works
@@ -276,7 +277,7 @@ b, strong
 	flex-wrap: wrap
 
 .work-item
-	height: 50vh
+	height: 54vh
 	
 	
 	overflow: hidden
@@ -375,6 +376,7 @@ b, strong
 //partners
 
 #partners
+	padding: 50px 0
 	.block_h2
 		padding-bottom: 0
 		margin-bottom: 0
@@ -412,29 +414,32 @@ b, strong
 // 	padding-bottom: 50px
 	
 
-.clients-wrapper
+// .clients-wrapper
+// 	display: flex
+// 	flex-wrap: no-wrap
+// 	justify-content: space-between
+// 	align-items: center
+// 	margin-bottom: 30px
+// 	.client-item
+// 		flex-basis: 20%
+// 		padding: 20px 0
+// 		display: flex
+// 		justify-content: center
+// 		align-items: center
+// 		img
+// 			max-width: 40%
+// 			max-height: 2%
+
+.clients-wrap
 	display: flex
-	flex-wrap: wrap
-	justify-content: space-around
-	align-items: center
-	margin-bottom: 30px
-	.client-item
-		max-width: 280px
-		padding: 20px 0
-		display: flex
-		justify-content: center
-		align-items: center
-		img
-			max-width: 60%
-
-
+	justify-content: center
 
 //footer
 .mainfooter
 	background-color: #000
 	color: #fff
 	font-size: 14px
-	padding: 30px 40px
+	padding: 19px 40px
 	padding-bottom: 0
 	.footer-column
 		margin: 15px 0
@@ -446,17 +451,19 @@ b, strong
 			margin-right: 10px
 			a
 				color: #fff
-				font-size: 30px
+				font-size: 22px
 
 .silence_digital_low_wrap
 	width: 100%
 	display: flex
 	justify-content: center
 	align-items: center
+	img
+		max-width: 46%
 
 .phone-wrap
 	text-align: right
-	font-size: 24px
+	font-size: 18px
 	.fas
 		transform: scaleX(-1)
 		position: relative
@@ -466,7 +473,28 @@ b, strong
 
 .copyright-wrap
 	text-align: right
-		
+	font-size: 12px
+
+.email
+	font-size: 17px
+	a
+		color: #fff
+		&:hover
+			text-decoration: none
+
+#footer_column_center
+	height: 100%
+	margin: 0
+	display: flex
+	align-items: center
+
+#phone_column
+	margin: 0
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	height: 100%
+
 // footer end
 
 
