@@ -96,9 +96,11 @@ $(function() {
       if(winWidth >= 992){
   		if(winPos >= 200){
   			$('.masthead').addClass('fixed');
+  			$('#backtop').fadeIn(500);
   		}
   		else{
   			$('.masthead').removeClass('fixed');
+  			$('#backtop').fadeOut(500);
       }
         }
   	})
@@ -116,8 +118,23 @@ $(function() {
   		$(this).addClass('blur');
   		}, function(){
   		$(this).removeClass('blur');
-  		})
+  		});
 
+
+  	//scroll top
+  	function scrollTopF(){
+  		var windowHeigth = $(window).height();
+  	$('#backtop').click(function()
+  		{
+  			$('body').animate({scrollTop:0}, 1000);
+  			$('html').animate({scrollTop:0}, 1000);
+  		});
+  	$('#arrowdown').click(function()
+  		{
+  			$('body').animate({scrollTop: windowHeigth-55}, 1000);
+  			$('html').animate({scrollTop: windowHeigth-55}, 1000);
+  		});}
+  	scrollTopF();
 
   
   

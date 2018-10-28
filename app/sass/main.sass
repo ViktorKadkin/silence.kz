@@ -197,9 +197,8 @@ b, strong
 // 	width: 64px
 
 #svg-logo
-	max-width: 64px
+	width: 64px
 	.cls-1
-		fill-rule: evenodd
 		fill: #ffffff
 
 
@@ -227,10 +226,25 @@ b, strong
 	position: absolute
 	z-index: 1
 	color: rgba(255, 255, 255, .85)
-	left: 33%
+	left: 0
+	right: 0
 	top: 40%
 	font-size: 2.08vmax
-	text-align: left
+	text-align: center
+
+.arrowdown-wrapper
+	position: absolute
+	bottom: 40px
+	z-index: 103
+	left: 0
+	right: 0
+	text-align: center
+	.animated
+		display: inline-block
+		cursor: pointer
+		#arrowdown-svg
+			path
+				fill: #ffffff
 
 // First selection
 #about
@@ -278,8 +292,6 @@ b, strong
 
 .work-item
 	height: 54vh
-	
-	
 	overflow: hidden
 	position: relative
 	img
@@ -433,17 +445,23 @@ b, strong
 .clients-wrap
 	display: flex
 	justify-content: center
+	img
+		max-width: 100%
 
 //footer
 .mainfooter
 	background-color: #000
 	color: #fff
 	font-size: 14px
-	padding: 19px 40px
+	padding: 0 40px
 	padding-bottom: 0
 	.footer-column
-		margin: 15px 0
+		margin-top: 15px
 		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
 	.social
 		list-style: none
 		li
@@ -482,18 +500,18 @@ b, strong
 		&:hover
 			text-decoration: none
 
-#footer_column_center
-	height: 100%
-	margin: 0
-	display: flex
-	align-items: center
+// #footer_column_center
+// 	height: 100%
+// 	margin: 0
+// 	display: flex
+// 	align-items: center
 
-#phone_column
-	margin: 0
-	display: flex
-	justify-content: flex-end
-	align-items: center
-	height: 100%
+// #phone_column
+// 	margin: 0
+// 	display: flex
+// 	justify-content: flex-end
+// 	align-items: center
+// 	height: 100%
 
 // footer end
 
@@ -566,4 +584,30 @@ b, strong
 #fixed-logo
 	display: none
 //mobile menu end
+
+//scroll top
+
+.scroll-top
+	position: fixed
+	width: 44px
+	height: 44px
+	right: 10px
+	bottom: 10px
+	background-color: rgba(0,0,0,.4)
+	border-radius: 2px
+	z-index: 109
+	display: none
+	cursor: pointer
+	&::before
+		display: block
+		content: ""
+		width: 20px
+		height: 20px
+		background-image: url(../img/svg/up-arrow.svg)
+		background-repeat: no-repeat
+		background-position: center center
+		position: absolute
+		top: 12px
+		left: 12px
+
 @import "media" // Always at the end
