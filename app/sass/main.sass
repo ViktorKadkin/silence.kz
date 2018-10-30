@@ -188,9 +188,11 @@ b, strong
 .branding
 	width: 7.07vw
 	display: flex
-	align-item: center
+	align-items: center
 	a
 		margin: auto
+		display: flex
+		align-items: center
 	justify-content: center
 
 // #img-logo
@@ -566,7 +568,7 @@ b, strong
 	opacity: 1
 	visibility: visible
 
-.fixed
+.fixed, .not-home
 	position: fixed
 	background-color: #fff
 	height: 60px
@@ -591,7 +593,9 @@ b, strong
 #fixed-logo
 	display: none
 //mobile menu end
-
+.not-home
+	position: relative
+	color: #000
 //scroll top
 
 .scroll-top
