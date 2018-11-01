@@ -435,27 +435,22 @@ b, strong
 // 	padding-bottom: 50px
 	
 
-// .clients-wrapper
-// 	display: flex
-// 	flex-wrap: no-wrap
-// 	justify-content: space-between
-// 	align-items: center
-// 	margin-bottom: 30px
-// 	.client-item
-// 		flex-basis: 20%
-// 		padding: 20px 0
-// 		display: flex
-// 		justify-content: center
-// 		align-items: center
-// 		img
-// 			max-width: 40%
-// 			max-height: 2%
-
-.clients-wrap
+.clients-wrapper
 	display: flex
-	justify-content: center
-	img
-		max-width: 100%
+	width: 100%
+	justify-content: space-between
+	.client-item
+		flex-basis: 20%
+		padding: 40px 0
+		display: flex
+		justify-content: center
+		align-items: center
+		img
+			max-width: 40%
+			height: auto
+			max-height: 100px
+
+
 
 //footer
 .mainfooter
@@ -471,14 +466,16 @@ b, strong
 		display: flex
 		flex-direction: column
 		justify-content: center
-	.social
-		list-style: none
-		li
-			display: inline-block
-			margin-right: 10px
-			a
-				color: #fff
-				font-size: 22px
+
+
+.social
+	list-style: none
+	li
+		display: inline-block
+		margin-right: 10px
+		a
+			color: #fff
+			font-size: 22px
 
 .silence_digital_low_wrap
 	width: 100%
@@ -620,5 +617,27 @@ b, strong
 		position: absolute
 		top: 12px
 		left: 12px
+
+
+//page contacts
+.header-page-wrapper
+	h2
+		text-align: center
+		margin: 35px 0
+		font-size: 28px
+
+
+.contact-wrapper
+	h3, p
+		text-align: center
+		font-size: 24px
+		font-weight: 100
+	
+.contact-social
+	text-align: center
+	li
+		display: inline
+		a
+			color: #000000
 
 @import "media" // Always at the end
