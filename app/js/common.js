@@ -103,6 +103,13 @@ $(function() {
   			$('#backtop').fadeOut(500);
       }
         }
+        else{
+        	if(winPos >= 200){
+  					$('.toggle-mnu').addClass('fixed-mobile ');
+  					}
+  					else{
+  					$('.toggle-mnu').removeClass('fixed-mobile ');
+        		}}
   	})
   	//togle menu
   	$(".toggle-mnu").click(function() {
