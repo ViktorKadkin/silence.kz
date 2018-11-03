@@ -83,6 +83,10 @@ $(function() {
     });
   }
 
+  setTimeout(function(){
+  	document.getElementsByTagName('video')[0].play();
+
+  	}, 1000);
   
   	
 
