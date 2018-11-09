@@ -40,6 +40,11 @@ $(function() {
     videoWidth,
     videoHeight;
 
+
+    //display offset
+
+
+
     // console.log(windowHeight);
 
     $(element).each(function(){
@@ -73,16 +78,21 @@ $(function() {
   	$(window).scroll(function(){
       winWidth = $(window).width();
 
-  		winPos = $(window).scrollTop();
-      if(winWidth >= 992){
-  		if(winPos >= 200){
-  			$('.masthead').addClass('fixed');
-  			$('#backtop').fadeIn(500);
-  		}
-  		else{
-  			$('.masthead').removeClass('fixed');
-  			$('#backtop').fadeOut(500);
+  		winPos = $(window).scrollTop(); 
+
+
+      // scroll to up Показать или скрыть кнопку "Вверх" в зависимости положения
+      if(winPos >= 200){
+        $('.masthead').addClass('fixed');
+        $('#backtop').fadeIn(500);
       }
+      else{
+        $('.masthead').removeClass('fixed');
+        $('#backtop').fadeOut(500);
+      }
+
+
+      if(winWidth >= 992){
         }
         else{
         	if(winPos >= 200){
@@ -99,11 +109,13 @@ $(function() {
   	$('.mobile-sticky-header-overlay').toggleClass('active-overlay');
   	return false;
 		});
-    $('.mobile-sticky-header-overlay').click(function(){
+    $('.mobile-sticky-header-overlay, .batton-close').click(closeMobileMenu);
+
+    function closeMobileMenu(){
       $('.toggle-mnu').removeClass('on');
       $('.mobile-menu').removeClass('show-mobile-menu');
-      $(this).removeClass('active-overlay');
-    });
+      $('.mobile-sticky-header-overlay').removeClass('active-overlay');
+    }
 
     
 
@@ -140,6 +152,7 @@ $(function() {
             dist    = $(element).offset().top - 60;
 
             $('html, body').animate({'scrollTop': dist}, 1000);
+            closeMobileMenu();
 
             return false;
       });
@@ -148,16 +161,7 @@ $(function() {
     scrollMnu();
 
 
-    //map
 
-    ymaps.ready(init);
-    function init(){ 
-        // Создание карты.    
-        var myMap = new ymaps.Map("map", {
-            center: [43.23751815759411,76.94033748448767],
-            zoom: 17
-        });
-    }
 
   
   

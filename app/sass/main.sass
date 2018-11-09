@@ -9,6 +9,8 @@
 // 	background-color: $accent
 // 	color: #666
 
+
+
 body
 	font-size: 16px
 	min-width: 320px
@@ -28,6 +30,12 @@ body
 
 ul
 	padding-inline-start: 0
+
+a
+	color: #000
+	&:hover
+		text-decoration: none
+
 
 .img-responsive
 	display: block
@@ -498,6 +506,8 @@ b, strong
 .phone-wrap
 	text-align: right
 	font-size: 18px
+	a
+		color: #fff
 	.fas
 		transform: scaleX(-1)
 		position: relative
@@ -690,5 +700,32 @@ b, strong
 //map
 #map
 	height: 35vh
+
+.batton-close
+	position: absolute
+	display: block
+	width: 30px
+	height: 30px
+	margin: 0
+	top: 0
+	right: 10px
+	&::before, &::after
+		content: ''
+		display: inline-block
+		width: 22px
+		height: 2px
+		background-color: #909596
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -1px 0 0 -11px;
+
+	&::before
+		transform: rotate3d(0,0,1,45deg);
+	&::after
+		transform: rotate3d(0,0,1,-45deg);
+	
+
+
 
 @import "media" // Always at the end
