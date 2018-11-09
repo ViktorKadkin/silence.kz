@@ -99,6 +99,13 @@ $(function() {
   	$('.mobile-sticky-header-overlay').toggleClass('active-overlay');
   	return false;
 		});
+    $('.mobile-sticky-header-overlay').click(function(){
+      $('.toggle-mnu').removeClass('on');
+      $('.mobile-menu').removeClass('show-mobile-menu');
+      $(this).removeClass('active-overlay');
+    });
+
+    
 
   	// blur work
 
@@ -117,12 +124,40 @@ $(function() {
   			$('body').animate({scrollTop:0}, 1000);
   			$('html').animate({scrollTop:0}, 1000);
   		});
+    //scroll d
   	$('#arrowdown').click(function()
   		{
   			$('body').animate({scrollTop: windowHeigth-55}, 1000);
   			$('html').animate({scrollTop: windowHeigth-55}, 1000);
   		});}
   	scrollTopF();
+
+
+    function scrollMnu() {
+
+      $('.anchor').click(function(){
+        var element = $(this).attr('href'),
+            dist    = $(element).offset().top - 60;
+
+            $('html, body').animate({'scrollTop': dist}, 1000);
+
+            return false;
+      });
+      // body...
+    }
+    scrollMnu();
+
+
+    //map
+
+    ymaps.ready(init);
+    function init(){ 
+        // Создание карты.    
+        var myMap = new ymaps.Map("map", {
+            center: [43.23751815759411,76.94033748448767],
+            zoom: 17
+        });
+    }
 
   
   
