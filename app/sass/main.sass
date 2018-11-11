@@ -9,6 +9,8 @@
 // 	background-color: $accent
 // 	color: #666
 
+
+
 body
 	font-size: 16px
 	min-width: 320px
@@ -28,6 +30,12 @@ body
 
 ul
 	padding-inline-start: 0
+
+a
+	color: #000
+	&:hover
+		text-decoration: none
+
 
 .img-responsive
 	display: block
@@ -58,67 +66,66 @@ b, strong
   display: block !important
 
 .video-container
-  position: relative
-  bottom: 0%
-  left: 0%
-  height: 100%
-  width: 100%
-  overflow: hidden
-  background: #000
-  .poster img
-    width: 100%
-    bottom: 0
-    position: absolute
-  .filter
-    z-index: 100
-    position: absolute
-    background: rgba(0, 0, 0, 0.4)
-    width: 100%
-  video
-    position: absolute
-    z-index: 0
-    bottom: 0
-    &.fillWidth
-      width: 100%
+	position: relative
+	bottom: 0%
+	left: 0%
+	height: 100%
+	width: 100%
+	overflow: hidden
+	background: #000
+	.poster img
+		width: 100%
+		bottom: 0
+		position: absolute
+	.filter
+		z-index: 100
+		position: absolute
+		background: rgba(0, 0, 0, 0.4)
+		width: 100%
+	video
+		position: absolute
+		z-index: 0
+		bottom: 0
+		&.fillWidth
+	  		width: 100%
 // video bg end
 // togle menu 
-.toggle-mnu 
-  display: block
-  width: 28px
-  height: 28px
-  margin-top: 14px
-  outline: none
+.toggle-mnu
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 10px
+	outline: none
 
-  span:after, span:before 
-    content: ""
-    position: absolute
-    left: 0
-    top: 9px
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
 
-  span:after
-    top: 18px
+	span:after
+		top: 18px
 
-  span 
-    position: relative
-    display: block
+	span
+		position: relative
+		display: block
 
-  span, span:after, span:before
-    width: 100%
-    height: 2px
-    background-color: #fff
-    transition: all 0.3s
-    backface-visibility: hidden
-    border-radius: 2px
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: #fff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
 
+	&.on span 
+		background-color: transparent !important
 
-  &.on span 
-    background-color: transparent
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
 
-  &.on span:before 
-    transform: rotate(45deg) translate(-1px, 0px)
-
-  &.on span:after 
-    transform: rotate(-45deg) translate(6px, -7px)
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
 
 // togle menu end
 
@@ -226,7 +233,7 @@ b, strong
 	font-weight: 200
 	text-transform: uppercase
 	position: absolute
-	z-index: 1
+	z-index: 103
 	color: rgba(255, 255, 255, .85)
 	left: 0
 	right: 0
@@ -499,6 +506,8 @@ b, strong
 .phone-wrap
 	text-align: right
 	font-size: 18px
+	a
+		color: #fff
 	.fas
 		transform: scaleX(-1)
 		position: relative
@@ -606,6 +615,24 @@ b, strong
 	padding: 10px
 	border-radius: 3px
 	margin-top: 0
+	span
+		background-color: #fff
+		&::before
+			background-color: #fff
+		&::after
+			background-color: #fff
+
+.batton-close
+	display: block
+	position: absolute
+	width: 30px
+	height: 30px
+	right: 0
+	top: 0
+	background-color: #ecf0f
+	text-align: center
+
+
 
 	#img-logo
 		display: none
@@ -662,12 +689,43 @@ b, strong
 		text-align: center
 		font-size: 24px
 		font-weight: 100
-	
+ 
 .contact-social
 	text-align: center
 	li
 		display: inline
 		a
 			color: #000000
+
+//map
+#map
+	height: 35vh
+
+.batton-close
+	position: absolute
+	display: block
+	width: 30px
+	height: 30px
+	margin: 0
+	top: 0
+	right: 10px
+	&::before, &::after
+		content: ''
+		display: inline-block
+		width: 22px
+		height: 2px
+		background-color: #909596
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -1px 0 0 -11px;
+
+	&::before
+		transform: rotate3d(0,0,1,45deg);
+	&::after
+		transform: rotate3d(0,0,1,-45deg);
+	
+
+
 
 @import "media" // Always at the end

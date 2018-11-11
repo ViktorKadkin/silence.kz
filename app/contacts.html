@@ -50,8 +50,8 @@
 							<div class="header-bar hidden-md">
 								<nav class="navigation">
 									<ul>
-										<li><a href="#"><span class="line">О нас</span></a></li>
-										<li><a href="#"><span class="line">Работы</span></a></li>
+										<li><a href="#" class="anchor"><span class="line">О нас</span></a></li>
+										<li><a href="#" class="anchor"><span class="line">Работы</span></a></li>
 									</ul>
 								</nav>
 								<div class="branding"><a href="silence.kz">
@@ -70,7 +70,7 @@
 								</div>
 								<nav class="navigation">
 									<ul>
-										<li><a href="#"><span class="line">Клиенты</span></a></li>
+										<li><a href="#" class="anchor"><span class="line">Клиенты</span></a></li>
 										<li><a href="#"><span class="line">Контакты</span></a></li>
 									</ul>
 								</nav>
@@ -117,17 +117,17 @@
 		<div class="row">
 			<div class="col-12">
 				<ul class="social contact-social" style="margin-bottom: 0px;">
-				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-				<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-				<li><a href="#"><i class="fab fa-vk"></i></a></li>
-				<li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+				<li><a href="https://www.instagram.com/silence.digital/"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.behance.net/silencedigital"><i class="fab fa-behance"></i></a></li>
+				<li><a href="https://vk.com/silencedigital"><i class="fab fa-vk"></i></a></li>
+				<li><a href="https://vimeo.com/silencedigital"><i class="fab fa-vimeo-v"></i></a></li>
 			</ul>
 			<div class="email"><a href="mailto:info@silence.kz">info@silence.kz</a></div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="map"></div>
+	<div id="map"></div>
 
 </section>
 
@@ -150,7 +150,7 @@
 			<div class="silence_digital_low_wrap"><img src="img/svg/SilenceDigital_white.svg" alt="silence digital"></div></div>
 		</div>
 		<div class="col-lg-4"><div class="footer-column" id="phone_column">
-			<div class="phone-wrap"><i class="fas fa-phone"></i>+7 701 646 27 44</div>
+			<div class="phone-wrap"><a href="tel:+77016462744"><i class="fas fa-phone"></i>+7 701 646 27 44</a></div>
 		</div></div>
 		</div>
 		<div class="row">
@@ -161,18 +161,58 @@
 </footer>
 
 <div class="mobile-menu">
+	<span class="batton-close"></span>
 	<ul>
-		<li><a href="#">О нас</a></li>
-		<li><a href="#">Работы</a></li>
-		<li><a href="#">Клиенты</a></li>
-		<li><a href="#">Контакты</a></li>
+		<li><a class="anchor" href="#about">О нас</a></li>
+		<li><a class="anchor" href="#works">Работы</a></li>
+		<li><a class="anchor" href="#partners">Клиенты</a></li>
+		<li><a href="contacts.html">Контакты</a></li>
 	</ul>
 </div>
 
 <div class="scroll-top" id="backtop"></div>
 <div class="mobile-sticky-header-overlay"></div>
 
+<script src="https://api-maps.yandex.ru/2.1/?apikey=<7c8e0d73-60de-4eef-b272-e0cd9dc10cbc>&lang=ru_RU" type="text/javascript">
+    </script>
 <script src="js/scripts.min.js"></script>
+<script type="text/javascript">
+	    //map
+
+    ymaps.ready(init);
+   
+
+
+
+
+    function init(){ 
+        // Создание карты.    
+        var myMap = new ymaps.Map("map", {
+            center: [43.23751815759411,76.94033748448767],
+            zoom: 17,
+            controls:['typeSelector', 'zoomControl']
+        });
+        	var myPlacemark = new ymaps.Placemark([43.23751815759411,76.94033748448767]);
+			myMap.geoObjects.add(myPlacemark);
+			myMap.behaviors.disable(
+				'drag'
+			);
+
+		myMap.behaviors.disable('scrollZoom');
+
+
+
+
+
+
+	
+
+        
+       
+    }
+
+
+</script>
 
 </body>
 </html>

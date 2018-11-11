@@ -40,6 +40,11 @@ $(function() {
     videoWidth,
     videoHeight;
 
+
+    //display offset
+
+
+
     // console.log(windowHeight);
 
     $(element).each(function(){
@@ -73,16 +78,21 @@ $(function() {
   	$(window).scroll(function(){
       winWidth = $(window).width();
 
-  		winPos = $(window).scrollTop();
-      if(winWidth >= 992){
-  		if(winPos >= 200){
-  			$('.masthead').addClass('fixed');
-  			$('#backtop').fadeIn(500);
-  		}
-  		else{
-  			$('.masthead').removeClass('fixed');
-  			$('#backtop').fadeOut(500);
+  		winPos = $(window).scrollTop(); 
+
+
+      // scroll to up Показать или скрыть кнопку "Вверх" в зависимости положения
+      if(winPos >= 200){
+        $('.masthead').addClass('fixed');
+        $('#backtop').fadeIn(500);
       }
+      else{
+        $('.masthead').removeClass('fixed');
+        $('#backtop').fadeOut(500);
+      }
+
+
+      if(winWidth >= 992){
         }
         else{
         	if(winPos >= 200){
@@ -99,6 +109,15 @@ $(function() {
   	$('.mobile-sticky-header-overlay').toggleClass('active-overlay');
   	return false;
 		});
+    $('.mobile-sticky-header-overlay, .batton-close').click(closeMobileMenu);
+
+    function closeMobileMenu(){
+      $('.toggle-mnu').removeClass('on');
+      $('.mobile-menu').removeClass('show-mobile-menu');
+      $('.mobile-sticky-header-overlay').removeClass('active-overlay');
+    }
+
+    
 
   	// blur work
 
@@ -117,12 +136,32 @@ $(function() {
   			$('body').animate({scrollTop:0}, 1000);
   			$('html').animate({scrollTop:0}, 1000);
   		});
+    //scroll d
   	$('#arrowdown').click(function()
   		{
   			$('body').animate({scrollTop: windowHeigth-55}, 1000);
   			$('html').animate({scrollTop: windowHeigth-55}, 1000);
   		});}
   	scrollTopF();
+
+
+    function scrollMnu() {
+
+      $('.anchor').click(function(){
+        var element = $(this).attr('href'),
+            dist    = $(element).offset().top - 60;
+
+            $('html, body').animate({'scrollTop': dist}, 1000);
+            closeMobileMenu();
+
+            return false;
+      });
+      // body...
+    }
+    scrollMnu();
+
+
+
 
   
   
