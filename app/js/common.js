@@ -150,11 +150,21 @@ $(function() {
   	scrollTopF();
 
 
+
+  	// menu navigation
     function scrollMnu() {
+
+    	var offset;
+    	if($(window).width()>=992){
+    		offset = 60;
+    	}
+    	else{
+    		offset = 0;
+    	}
 
       $('.anchor').click(function(){
         var element = $(this).attr('href'),
-            dist    = $(element).offset().top - 60;
+            dist    = $(element).offset().top - offset;
 
             $('html, body').animate({'scrollTop': dist}, 1000);
             closeMobileMenu();
